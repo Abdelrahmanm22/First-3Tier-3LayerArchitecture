@@ -1,0 +1,13 @@
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\bin\Debug\net5.0\Demo.DataAccess.deps.json
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\bin\Debug\net5.0\Demo.DataAccess.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\bin\Debug\net5.0\Demo.DataAccess.pdb
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\Demo.DataAccess.csproj.AssemblyReference.cache
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\Demo.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\Demo.DataAccess.AssemblyInfoInputs.cache
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\Demo.DataAccess.AssemblyInfo.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\Demo.DataAccess.csproj.CoreCompileInputs.cache
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\Demo.DataAccess.sourcelink.json
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\Demo.DataAccess.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\refint\Demo.DataAccess.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\Demo.DataAccess.pdb
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.DataAccess\obj\Debug\net5.0\ref\Demo.DataAccess.dll

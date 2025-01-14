@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Demo.DataAccess.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +26,11 @@ namespace Demo.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            ///Allow Dependenncy Injection
+            services.AddDbContext<MVCAppDbContext>(Options =>
+            {
+                Options.UseSqlServer("Server = .; Database = MVCAppDb; Trusted_Connection = True");
+            });            ///needs package EFCore.SQlServer in Data access layer so need to build only
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

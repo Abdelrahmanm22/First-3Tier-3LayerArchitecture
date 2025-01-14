@@ -8,13 +8,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Demo.DataAccess.Contexts
 {
-    internal class MVCAppDbContext:DbContext
+    public class MVCAppDbContext:DbContext
     {
-        public DbSet<Department> Departments { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public MVCAppDbContext(DbContextOptions<MVCAppDbContext> options):base(options)
         {
-            optionsBuilder.UseSqlServer("Server = .; Database = MVCAppDb; Trusted_Connection = True");
+             
         }
+        public DbSet<Department> Departments { get; set; }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server = .; Database = MVCAppDb; Trusted_Connection = True");
+        //}
 
     }
 }
