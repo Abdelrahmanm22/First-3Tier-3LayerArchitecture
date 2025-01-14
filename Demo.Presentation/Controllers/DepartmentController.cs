@@ -49,5 +49,40 @@ namespace Demo.Presentation.Controllers
             
             return View(department);
         }
+
+        [HttpGet]
+        public IActionResult Edit(int? id) {
+            if (id is null)
+                return BadRequest(); //status code 400
+            var department = _departmentRepo.GetById(id.Value);
+            if (department is null)
+                return NotFound();
+            return View(department);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Department department, [FromRoute] int id)
+        {
+            if (id != department.Id) //for security
+            {
+                return BadRequest();
+            }
+
+            if (ModelState.IsValid) ///check server validation
+            {
+                try
+                {
+                    _departmentRepo.Update(department);
+                    return RedirectToAction(nameof(Index));
+                }catch(System.Exception ex)
+                {
+                    //1. Log Exeption
+                    //2. view in form
+                    ModelState.AddModelError(string.Empty,ex.Message);
+                }
+                
+            }
+            return View(department);
+        }
     }
 }
