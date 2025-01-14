@@ -29,7 +29,8 @@ namespace Demo.Presentation
             ///Allow Dependenncy Injection
             services.AddDbContext<MVCAppDbContext>(Options =>
             {
-                Options.UseSqlServer("Server = .; Database = MVCAppDb; Trusted_Connection = True");
+                //Options.UseSqlServer("Server = .; Database = MVCAppDb; Trusted_Connection = True");   el makan el s7 ely yt7t feh el connection string hwa el ((appsetting.json)) 
+                Options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });            ///needs package EFCore.SQlServer in Data access layer so need to build only
         }
 
