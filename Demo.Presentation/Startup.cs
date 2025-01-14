@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Demo.BusinessLogic.Interfaces;
+using Demo.BusinessLogic.Repositories;
 using Demo.DataAccess.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +34,8 @@ namespace Demo.Presentation
                 //Options.UseSqlServer("Server = .; Database = MVCAppDb; Trusted_Connection = True");   el makan el s7 ely yt7t feh el connection string hwa el ((appsetting.json)) 
                 Options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });            ///needs package EFCore.SQlServer in Data access layer so need to build only
+
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>(); //allow dependency injection
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
