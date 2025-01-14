@@ -391,3 +391,6 @@ D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Demo.Presentation.pdb
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Demo.Presentation.genruntimeconfig.cache
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\ref\Demo.Presentation.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\Humanizer.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Demo.Presentation.MvcApplicationPartsAssemblyInfo.cs
