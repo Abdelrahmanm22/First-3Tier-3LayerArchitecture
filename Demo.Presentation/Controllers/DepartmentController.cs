@@ -36,5 +36,18 @@ namespace Demo.Presentation.Controllers
             }
             return View(department);
         }
+
+
+        ///BaseURL/Department/Details/id
+        public IActionResult Details(int? id) {
+            if (id is null) 
+                return BadRequest(); //status code 400
+            
+            var department = _departmentRepo.GetById(id.Value);
+            if (department is null) 
+                return NotFound();
+            
+            return View(department);
+        }
     }
 }
