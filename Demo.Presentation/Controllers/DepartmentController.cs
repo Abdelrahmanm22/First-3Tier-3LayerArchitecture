@@ -12,9 +12,13 @@ namespace Demo.Presentation.Controllers
             //_departmentRepo = new DepartmentRepository();
             _departmentRepo = departmentRepo;
         }
+
+        //get all Departments
+        //BaseURL/Department/Index
         public IActionResult Index()
         {
-            return View();
+            var departments = _departmentRepo.GetAll(); 
+            return View(departments);
         }
     }
 }
