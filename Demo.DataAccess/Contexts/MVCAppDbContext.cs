@@ -15,6 +15,7 @@ namespace Demo.DataAccess.Contexts
              
         }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlServer("Server = .; Database = MVCAppDb; Trusted_Connection = True");
