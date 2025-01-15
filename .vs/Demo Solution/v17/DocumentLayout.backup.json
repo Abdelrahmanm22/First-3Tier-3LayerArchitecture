@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\department\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\department\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\department\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\department\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\department\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\department\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\department\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,41 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Details.cshtml",
-              "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Department\\Details.cshtml",
-              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Details.cshtml",
-              "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Department\\Delete.cshtml",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Delete.cshtml",
+              "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T21:57:00.566Z",
+              "WhenOpened": "2025-01-15T11:40:02.361Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Edit.cshtml",
               "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Department\\Edit.cshtml",
               "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Edit.cshtml",
               "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-14T21:56:57.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Create.cshtml",
               "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Department\\Create.cshtml",
@@ -72,18 +68,17 @@
               "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Create.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T21:41:20.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T21:41:20.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Index.cshtml",
               "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Department\\Index.cshtml",
               "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Index.cshtml",
               "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-14T21:32:25.741Z",
               "EditorCaption": ""
@@ -96,7 +91,7 @@
               "RelativeDocumentMoniker": "Demo.Presentation\\Controllers\\DepartmentController.cs",
               "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\DepartmentController.cs",
               "RelativeToolTip": "Demo.Presentation\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAmwEEAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAGwAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T18:40:10.257Z",
               "EditorCaption": ""

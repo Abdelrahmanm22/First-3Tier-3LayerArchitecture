@@ -84,5 +84,31 @@ namespace Demo.Presentation.Controllers
             }
             return View(department);
         }
+
+        public IActionResult Delete(int? id) {
+            if (id is null)
+                return BadRequest(); //status code 400
+            var department = _departmentRepo.GetById(id.Value);
+            if (department is null)
+                return NotFound();
+            return View(department);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Department department)
+        {
+            try
+            {
+                _departmentRepo.Delete(department);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (System.Exception ex)
+            {
+                //1. Log Exeption
+                //2. view in form
+                ModelState.AddModelError(string.Empty, ex.Message);
+            }
+            return View(department);
+        }
     }
 }
