@@ -9,39 +9,18 @@ using Demo.DataAccess.Models;
 
 namespace Demo.BusinessLogic.Repositories
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class EmployeeRepository : GenericRepository<Employee>, IEmployeeRepository
     {
         private readonly MVCAppDbContext dbContext;
-        public EmployeeRepository(MVCAppDbContext dbContext)
+
+        public EmployeeRepository(MVCAppDbContext dbContext):base(dbContext)
         {
             this.dbContext = dbContext;
         }
-        public int Add(Employee employee)
-        {
-            dbContext.Employees.Add(employee);
-            return dbContext.SaveChanges();
-        }
 
-        public int Delete(Employee employee)
+        public IQueryable<Employee> GetEmployeesByAddress(string address)
         {
-            dbContext.Employees.Remove(employee);
-            return dbContext.SaveChanges();
-        }
-
-        public IEnumerable<Employee> GetAll()
-        {
-            return dbContext.Employees.ToList();
-        }
-
-        public Employee GetById(int id)
-        {
-            return dbContext.Employees.Find(id);
-        }
-
-        public int Update(Employee employee)
-        {
-            dbContext.Employees.Update(employee);
-            return dbContext.SaveChanges();
+            return dbContext.Employees.Where(d => d.Address == address);
         }
     }
 }

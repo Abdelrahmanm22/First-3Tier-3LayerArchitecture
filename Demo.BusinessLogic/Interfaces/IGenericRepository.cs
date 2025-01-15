@@ -7,8 +7,12 @@ using Demo.DataAccess.Models;
 
 namespace Demo.BusinessLogic.Interfaces
 {
-    public interface IEmployeeRepository : IGenericRepository<Employee>
+    public interface IGenericRepository<T>
     {
-        IQueryable<Employee> GetEmployeesByAddress(string address);
+        IEnumerable<T> GetAll();
+        T GetById(int id);
+        int Add(T entity);
+        int Update(T entity);
+        int Delete(T entity);
     }
 }
