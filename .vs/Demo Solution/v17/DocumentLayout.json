@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Department\\Delete.cshtml",
               "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Delete.cshtml",
               "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-15T11:40:02.361Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T21:56:57.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T21:56:57.003Z"
             },
             {
               "$type": "Document",
@@ -82,7 +81,7 @@
               "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Department\\Index.cshtml",
               "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Index.cshtml",
               "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAABjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-14T21:32:25.741Z",
               "EditorCaption": ""
@@ -95,7 +94,7 @@
               "RelativeDocumentMoniker": "Demo.Presentation\\Controllers\\DepartmentController.cs",
               "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\DepartmentController.cs",
               "RelativeToolTip": "Demo.Presentation\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAAAGwAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAQwGwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T18:40:10.257Z",
               "EditorCaption": ""

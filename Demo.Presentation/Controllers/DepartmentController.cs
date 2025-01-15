@@ -95,8 +95,11 @@ namespace Demo.Presentation.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(Department department)
+        public IActionResult Delete(Department department, [FromRoute] int id)
         {
+            if (id != department.Id) {
+                return BadRequest();
+            }
             try
             {
                 _departmentRepo.Delete(department);
@@ -107,8 +110,8 @@ namespace Demo.Presentation.Controllers
                 //1. Log Exeption
                 //2. view in form
                 ModelState.AddModelError(string.Empty, ex.Message);
+                return View(department);
             }
-            return View(department);
         }
     }
 }
