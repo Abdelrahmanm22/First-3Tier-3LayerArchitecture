@@ -31,7 +31,10 @@ namespace Demo.Presentation.Controllers
         {
             if (ModelState.IsValid) ///check server validation
             {
-                _departmentRepo.Add(department);
+
+                int result = _departmentRepo.Add(department);
+                if (result > 0)
+                    TempData["Message"] = "Department Created Successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(department);
