@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C34B36FE-14E7-4E23-B421-15C19054F6C0}|Demo.DataAccess\\Demo.DataAccess.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.dataaccess\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34B36FE-14E7-4E23-B421-15C19054F6C0}|Demo.DataAccess\\Demo.DataAccess.csproj|solutionrelative:demo.dataaccess\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34B36FE-14E7-4E23-B421-15C19054F6C0}|Demo.DataAccess\\Demo.DataAccess.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.dataaccess\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34B36FE-14E7-4E23-B421-15C19054F6C0}|Demo.DataAccess\\Demo.DataAccess.csproj|solutionrelative:demo.dataaccess\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Employee\\Index.cshtml",
-              "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Employee\\Index.cshtml",
-              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Employee\\Index.cshtml",
-              "RelativeToolTip": "Demo.Presentation\\Views\\Employee\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T19:26:06.777Z",
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.DataAccess\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Demo.DataAccess\\Models\\Employee.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.DataAccess\\Models\\Employee.cs",
+              "RelativeToolTip": "Demo.DataAccess\\Models\\Employee.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAqwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T19:34:33.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.DataAccess\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Demo.DataAccess\\Models\\Department.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.DataAccess\\Models\\Department.cs",
+              "RelativeToolTip": "Demo.DataAccess\\Models\\Department.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T19:32:55.368Z",
               "EditorCaption": ""
             }
           ]
