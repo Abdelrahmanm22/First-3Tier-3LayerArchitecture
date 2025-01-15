@@ -36,6 +36,8 @@ namespace Demo.Presentation
             });            ///needs package EFCore.SQlServer in Data access layer so need to build only
 
             services.AddScoped<IDepartmentRepository, DepartmentRepository>(); //allow dependency injection
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>(); //allow dependency injection
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
