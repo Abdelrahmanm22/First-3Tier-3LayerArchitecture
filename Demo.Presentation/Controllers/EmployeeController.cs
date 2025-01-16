@@ -20,11 +20,17 @@ namespace Demo.Presentation.Controllers
             _departmentRepo = departmentRepo;
             _mapper = mapper;
         }
-        public IActionResult Index()
+        public IActionResult Index(string SearchValue)
         {
-            var employees = _empolyeeRepo.GetAll();
+            IEnumerable<Employee> employees;
+            if (string.IsNullOrEmpty(SearchValue)) 
+                 employees = _empolyeeRepo.GetAll();
+            else
+                employees = _empolyeeRepo.GetEmployeesByName(SearchValue);
+                
             var MappedEmployees = _mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeViewModel>>(employees);
             return View(MappedEmployees);
+
         }
 
         public IActionResult Create()

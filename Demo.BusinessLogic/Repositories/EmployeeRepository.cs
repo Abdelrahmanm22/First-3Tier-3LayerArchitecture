@@ -22,5 +22,10 @@ namespace Demo.BusinessLogic.Repositories
         {
             return dbContext.Employees.Where(d => d.Address == address);
         }
+
+        public IQueryable<Employee> GetEmployeesByName(string SearchName)
+        {
+            return dbContext.Employees.Where(e => e.Name.ToLower().Contains(SearchName.ToLower()));
+        }
     }
 }
