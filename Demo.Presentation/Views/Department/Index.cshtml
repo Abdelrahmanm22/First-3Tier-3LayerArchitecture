@@ -48,11 +48,12 @@ else
 @section Scripts {
 	<script>
 		// Hide the TempData message after 3 seconds
-		setTimeout(() => {
-			const messageDiv = document.getElementById('tempMessage');
-			if (messageDiv) {
-				messageDiv.style.display = 'none';
-			}
-		}, 3000);
+		// setTimeout(() => {
+		// 	const messageDiv = document.getElementById('tempMessage');
+		// 	if (messageDiv) {
+		// 		messageDiv.style.display = 'none';
+		// 	}
+		// }, 5000);
+		$('#tempMessage').delay(5000).fadeOut(500);
 	</script>
 }
