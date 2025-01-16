@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Demo.BusinessLogic.Interfaces;
 using Demo.DataAccess.Contexts;
+using Demo.DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Demo.BusinessLogic.Repositories
 {
@@ -30,6 +32,11 @@ namespace Demo.BusinessLogic.Repositories
 
         public IEnumerable<T> GetAll()
         {
+            ///da mosken l7d mnst5dm specification design pattern 
+            if (typeof(T) == typeof(Employee))
+            {
+                return (IEnumerable<T>) dbContext.Employees.Include(e=>e.Department).ToList();
+            }
             return dbContext.Set<T>().ToList();
         }
 

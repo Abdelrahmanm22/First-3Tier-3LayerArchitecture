@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Demo.BusinessLogic.Interfaces;
 using Demo.BusinessLogic.Repositories;
 using Demo.DataAccess.Contexts;
+using Demo.Presentation.MappingProfiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,6 +38,8 @@ namespace Demo.Presentation
 
             services.AddScoped<IDepartmentRepository, DepartmentRepository>(); //allow dependency injection
             services.AddScoped<IEmployeeRepository, EmployeeRepository>(); //allow dependency injection
+            services.AddAutoMapper(m=>m.AddProfile(new EmployeeProfile())); //Transient
+            services.AddAutoMapper(d => d.AddProfile(new DepartmentProfile())); //Transient
 
         }
 

@@ -106,7 +106,6 @@ D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Xml.dll
-D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -132,8 +131,6 @@ D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.ObjectPool.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.dll
-D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.Primitives.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Extensions.WebEncoders.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.JSInterop.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\Microsoft.Net.Http.Headers.dll
@@ -232,7 +229,6 @@ D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\System.Resources.Reader.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\System.Resources.ResourceManager.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\System.Resources.Writer.dll
-D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.Unsafe.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.VisualC.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\System.Runtime.dll
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\refs\System.Runtime.Extensions.dll
@@ -453,3 +449,9 @@ D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Employee\PartialViews\DeleteDetailsPartialView.cshtml.g.cs
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Department\PartialViews\CreateEditPartialView.cshtml.g.cs
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Department\PartialViews\DeleteDetailsPartialView.cshtml.g.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\AutoMapper.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

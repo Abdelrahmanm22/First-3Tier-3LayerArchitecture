@@ -1,5 +1,9 @@
-﻿using Demo.BusinessLogic.Interfaces;
+﻿using System.Collections;
+using System.Collections.Generic;
+using AutoMapper;
+using Demo.BusinessLogic.Interfaces;
 using Demo.DataAccess.Models;
+using Demo.Presentation.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Presentation.Controllers
@@ -7,31 +11,50 @@ namespace Demo.Presentation.Controllers
     public class EmployeeController : Controller
     {
         private readonly IEmployeeRepository _empolyeeRepo;
+        private readonly IDepartmentRepository _departmentRepo;
+        private readonly IMapper _mapper;
 
-        public EmployeeController(IEmployeeRepository empolyeeRepo)
+        public EmployeeController(IEmployeeRepository empolyeeRepo,IDepartmentRepository departmentRepo,IMapper mapper)
         {
             _empolyeeRepo = empolyeeRepo;
+            _departmentRepo = departmentRepo;
+            _mapper = mapper;
         }
         public IActionResult Index()
         {
             var employees = _empolyeeRepo.GetAll();
-            return View(employees);
+            var MappedEmployees = _mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeViewModel>>(employees);
+            return View(MappedEmployees);
         }
 
         public IActionResult Create()
         {
+            ViewBag.Departments =  _departmentRepo.GetAll();
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Employee employee)
+        public IActionResult Create(EmployeeViewModel employeeVM)
         {
             if (ModelState.IsValid)
             {
-                _empolyeeRepo.Add(employee);
+                ///Munual Mapping (not recommended)
+                ///var MappedEmployee = new Employee()
+                ///{
+                ///    Name = employeeVM.Name,
+                ///    Age = employeeVM.Age,
+                ///    Address = employeeVM.Address,
+                ///    PhoneNumber = employeeVM.PhoneNumber,
+                ///    DepartmentId = employeeVM.DepartmentId,
+                ///};
+                ///using casting
+                ///Employee employee = (Employee)employeeVM; //need to implement operator overloading in Model Employee!!!!!
+
+                var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
+                _empolyeeRepo.Add(MappedEmployee);
                 return RedirectToAction(nameof(Index));
             }
-            return View(employee);
+            return View(employeeVM);
         }
 
         public IActionResult Details(int? id) {
@@ -41,8 +64,9 @@ namespace Demo.Presentation.Controllers
             var employee = _empolyeeRepo.GetById(id.Value);
             if (employee is null)
                 return NotFound();
+            var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
 
-            return View(employee);
+            return View(MappedEmployee);
         }
 
         [HttpGet]
@@ -53,13 +77,15 @@ namespace Demo.Presentation.Controllers
             var employee = _empolyeeRepo.GetById(id.Value);
             if (employee is null)
                 return NotFound();
-            return View(employee);
+            var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
+            ViewBag.Departments = _departmentRepo.GetAll();
+            return View(MappedEmployee);
         }
 
         [HttpPost]
-        public IActionResult Edit(Employee employee, [FromRoute] int id)
+        public IActionResult Edit(EmployeeViewModel employeeVM, [FromRoute] int id)
         {
-            if (id != employee.Id) //for security
+            if (id != employeeVM.Id) //for security
             {
                 return BadRequest();
             }
@@ -68,7 +94,8 @@ namespace Demo.Presentation.Controllers
             {
                 try
                 {
-                    _empolyeeRepo.Update(employee);
+                    var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
+                    _empolyeeRepo.Update(MappedEmployee);
                     return RedirectToAction(nameof(Index));
                 }
                 catch (System.Exception ex)
@@ -79,7 +106,7 @@ namespace Demo.Presentation.Controllers
                 }
 
             }
-            return View(employee);
+            return View(employeeVM);
         }
         public IActionResult Delete(int? id)
         {
@@ -88,19 +115,21 @@ namespace Demo.Presentation.Controllers
             var employee = _empolyeeRepo.GetById(id.Value);
             if (employee is null)
                 return NotFound();
-            return View(employee);
+            var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
+            return View(MappedEmployee);
         }
 
         [HttpPost]
-        public IActionResult Delete(Employee employee, [FromRoute] int id)
+        public IActionResult Delete(EmployeeViewModel employeeVM, [FromRoute] int id)
         {
-            if (id != employee.Id)
+            if (id != employeeVM.Id)
             {
                 return BadRequest();
             }
             try
             {
-                _empolyeeRepo.Delete(employee);
+                var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
+                _empolyeeRepo.Delete(MappedEmployee);
                 return RedirectToAction(nameof(Index));
             }
             catch (System.Exception ex)
@@ -108,7 +137,7 @@ namespace Demo.Presentation.Controllers
                 //1. Log Exeption
                 //2. view in form
                 ModelState.AddModelError(string.Empty, ex.Message);
-                return View(employee);
+                return View(employeeVM);
             }
         }
     }

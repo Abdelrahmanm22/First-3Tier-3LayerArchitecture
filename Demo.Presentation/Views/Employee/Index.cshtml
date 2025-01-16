@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Employee>
+﻿@model IEnumerable<EmployeeViewModel>
 @{
     ViewData["Title"] = "All Employees";
 }
@@ -14,6 +14,7 @@
                 <td>Name</td>
                 <td>Age</td>
                 <td>Salary</td>
+                <td>Department</td>
                 <td>Address</td>
                 <td>Email</td>
                 <td>Phone Number</td>
@@ -31,6 +32,7 @@
                     <td>@employee.Name</td>
                     <td>@employee.Age</td>
                     <td>@Html.DisplayFor(e=>employee.Salary)</td>
+                    <td>@Html.DisplayFor(e => employee.Department.Name)</td>
                     <td>@employee.Address</td>
                     <td>@Html.DisplayFor(e => employee.Email)</td>
                     <td>@employee.PhoneNumber</td>

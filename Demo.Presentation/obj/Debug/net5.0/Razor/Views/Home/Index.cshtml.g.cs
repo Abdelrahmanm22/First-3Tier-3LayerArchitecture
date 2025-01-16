@@ -28,12 +28,18 @@ using Demo.Presentation.Models
 #line 3 "D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\Views\_ViewImports.cshtml"
 using Demo.DataAccess.Models
 
+#nullable disable
+    ;
+#nullable restore
+#line 4 "D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\Views\_ViewImports.cshtml"
+using Demo.Presentation.ViewModels
+
 #line default
 #line hidden
 #nullable disable
     ;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"2999aea4fd9585148590d2af132f38ffc044fe9b3869b38d4a2bbf6259d065ea", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"08af9158bab3e53799d4e66382c73730bac317e5c6d9c5191cdef4862b81a530", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"62afc194cdad7c8d127d3ab9d6c8a6c171c6e8aafed924387763ba9d0b9ebce0", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     internal sealed class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
