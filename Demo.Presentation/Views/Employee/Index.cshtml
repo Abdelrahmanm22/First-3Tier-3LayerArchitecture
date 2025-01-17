@@ -23,6 +23,7 @@
 		<thead>
 			<tr>
 				<td>Name</td>
+				<td>Employee Image</td>
 				<td>Age</td>
 				<td>Salary</td>
 				<td>Department</td>
@@ -41,6 +42,7 @@
 			{
 				<tr>
 					<td>@employee.Name</td>
+					<td><img src="~/Files/Images/@employee.ImageName" class="rounded" height="40" width="40" alt="Employee Image" /></td>
 					<td>@employee.Age</td>
 					<td>@Html.DisplayFor(e => employee.Salary)</td>
 					<td>@Html.DisplayFor(e => employee.Department.Name)</td>
