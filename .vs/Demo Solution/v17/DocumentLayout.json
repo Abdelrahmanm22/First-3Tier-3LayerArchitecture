@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.businesslogic\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|solutionrelative:demo.businesslogic\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.businesslogic\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|solutionrelative:demo.businesslogic\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.businesslogic\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|solutionrelative:demo.businesslogic\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.businesslogic\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|solutionrelative:demo.businesslogic\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.businesslogic\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|solutionrelative:demo.businesslogic\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.businesslogic\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|solutionrelative:demo.businesslogic\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.businesslogic\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CB9F854-177C-4196-9F60-3B726FE12DAC}|Demo.BusinessLogic\\Demo.BusinessLogic.csproj|solutionrelative:demo.businesslogic\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +58,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDepartmentRepository.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Demo.BusinessLogic\\Interfaces\\IDepartmentRepository.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeToolTip": "Demo.BusinessLogic\\Interfaces\\IDepartmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:58:04.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Index.cshtml",
-              "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Department\\Index.cshtml",
-              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Department\\Index.cshtml",
-              "RelativeToolTip": "Demo.Presentation\\Views\\Department\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T16:31:29.024Z",
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "Demo.Presentation\\Controllers\\DepartmentController.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "Demo.Presentation\\Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAwHsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:56:48.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Repositories\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Demo.BusinessLogic\\Repositories\\DepartmentRepository.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Repositories\\DepartmentRepository.cs",
+              "RelativeToolTip": "Demo.BusinessLogic\\Repositories\\DepartmentRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:10:04.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Demo.BusinessLogic\\Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Demo.BusinessLogic\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:28:22.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Repositories\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Demo.BusinessLogic\\Repositories\\EmployeeRepository.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Repositories\\EmployeeRepository.cs",
+              "RelativeToolTip": "Demo.BusinessLogic\\Repositories\\EmployeeRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:10:08.186Z",
               "EditorCaption": ""
             },
             {
@@ -49,22 +129,59 @@
               "RelativeDocumentMoniker": "Demo.Presentation\\Controllers\\EmployeeController.cs",
               "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "Demo.Presentation\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T16:17:17.798Z",
+              "WhenOpened": "2025-01-17T17:11:04.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Employee\\Index.cshtml",
-              "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Employee\\Index.cshtml",
-              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Employee\\Index.cshtml",
-              "RelativeToolTip": "Demo.Presentation\\Views\\Employee\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T16:11:42.467Z"
+              "DocumentIndex": 7,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Demo.BusinessLogic\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "Demo.BusinessLogic\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:04:02.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Demo.BusinessLogic\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "Demo.BusinessLogic\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:01:19.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Demo.BusinessLogic\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.BusinessLogic\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "Demo.BusinessLogic\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:28:16.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Startup.cs",
+              "RelativeDocumentMoniker": "Demo.Presentation\\Startup.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Startup.cs",
+              "RelativeToolTip": "Demo.Presentation\\Startup.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:13:17.002Z"
             }
           ]
         }

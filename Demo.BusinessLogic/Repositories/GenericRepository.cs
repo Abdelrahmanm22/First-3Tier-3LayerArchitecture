@@ -18,16 +18,14 @@ namespace Demo.BusinessLogic.Repositories
         {
             this.dbContext = dbContext;
         }
-        public int Add(T entity)
+        public void Add(T entity)
         {
             dbContext.Add(entity);
-            return dbContext.SaveChanges();
         }
 
-        public int Delete(T entity)
+        public void Delete(T entity)
         {
             dbContext.Remove(entity);
-            return dbContext.SaveChanges();
         }
 
         public IEnumerable<T> GetAll()
@@ -45,10 +43,9 @@ namespace Demo.BusinessLogic.Repositories
             return dbContext.Set<T>().Find(id);
         }
 
-        public int Update(T entity)
+        public void Update(T entity)
         {
             dbContext.Update(entity);
-            return dbContext.SaveChanges();
         }
     }
 }

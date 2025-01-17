@@ -37,9 +37,10 @@ namespace Demo.Presentation
             });            ///needs package EFCore.SQlServer in Data access layer so need to build only
 
             services.AddScoped<IDepartmentRepository, DepartmentRepository>(); //allow dependency injection
-            services.AddScoped<IEmployeeRepository, EmployeeRepository>(); //allow dependency injection
+            //services.AddScoped<IEmployeeRepository, EmployeeRepository>(); //allow dependency injection
             services.AddAutoMapper(m=>m.AddProfile(new EmployeeProfile())); //Transient
             services.AddAutoMapper(d => d.AddProfile(new DepartmentProfile())); //Transient
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         }
 

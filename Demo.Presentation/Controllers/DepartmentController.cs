@@ -9,13 +9,15 @@ namespace Demo.Presentation.Controllers
 {
     public class DepartmentController : Controller
     {
-        private readonly IDepartmentRepository _departmentRepo;
+        //private readonly IDepartmentRepository _departmentRepo;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public DepartmentController(IDepartmentRepository departmentRepo,IMapper mapper) // Ask CLR for Creating object from class implement Interface IDepartmentRepository
+        public DepartmentController(IUnitOfWork unitOfWork, IMapper mapper) // Ask CLR for Creating object from class implement Interface IDepartmentRepository
         {
             //_departmentRepo = new DepartmentRepository();
-            _departmentRepo = departmentRepo;
+            //_departmentRepo = departmentRepo;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
@@ -23,7 +25,7 @@ namespace Demo.Presentation.Controllers
         //BaseURL/Department/Index
         public IActionResult Index()
         {
-            var departments = _departmentRepo.GetAll(); 
+            var departments = _unitOfWork.DepartmentRepository.GetAll(); 
             return View(departments);
         }
         [HttpGet]
@@ -37,7 +39,9 @@ namespace Demo.Presentation.Controllers
             if (ModelState.IsValid) ///check server validation
             {
                 var MappedDepartment = _mapper.Map<DepartmentViewModel, Department>(departmentVM);
-                int result = _departmentRepo.Add(MappedDepartment);
+                _unitOfWork.DepartmentRepository.Add(MappedDepartment);
+                int result = _unitOfWork.Complete();
+
                 if (result > 0)
                     TempData["Message"] = "Department Created Successfully";
                 return RedirectToAction(nameof(Index));
@@ -51,7 +55,7 @@ namespace Demo.Presentation.Controllers
             if (id is null) 
                 return BadRequest(); //status code 400
             
-            var department = _departmentRepo.GetById(id.Value);
+            var department = _unitOfWork.DepartmentRepository.GetById(id.Value);
             if (department is null) 
                 return NotFound();
             var MappedDepartment = _mapper.Map<Department,DepartmentViewModel>(department);
@@ -63,7 +67,7 @@ namespace Demo.Presentation.Controllers
         public IActionResult Edit(int? id) {
             if (id is null)
                 return BadRequest(); //status code 400
-            var department = _departmentRepo.GetById(id.Value);
+            var department = _unitOfWork.DepartmentRepository.GetById(id.Value);
             if (department is null)
                 return NotFound();
             var MappedDepartment = _mapper.Map<Department, DepartmentViewModel>(department);
@@ -83,7 +87,8 @@ namespace Demo.Presentation.Controllers
                 try
                 {
                     var MappedDepartment = _mapper.Map<DepartmentViewModel, Department>(departmentVM);
-                    _departmentRepo.Update(MappedDepartment);
+                    _unitOfWork.DepartmentRepository.Update(MappedDepartment);
+                    _unitOfWork.Complete();
                     return RedirectToAction(nameof(Index));
                 }catch(System.Exception ex)
                 {
@@ -99,7 +104,7 @@ namespace Demo.Presentation.Controllers
         public IActionResult Delete(int? id) {
             if (id is null)
                 return BadRequest(); //status code 400
-            var department = _departmentRepo.GetById(id.Value);
+            var department = _unitOfWork.DepartmentRepository.GetById(id.Value);
             if (department is null)
                 return NotFound();
             var MappedDepartment = _mapper.Map<Department, DepartmentViewModel>(department);
@@ -115,7 +120,8 @@ namespace Demo.Presentation.Controllers
             try
             {
                 var MappedDepartment = _mapper.Map<DepartmentViewModel, Department>(departmentVM);
-                _departmentRepo.Delete(MappedDepartment);
+                _unitOfWork.DepartmentRepository.Delete(MappedDepartment);
+                _unitOfWork.Complete();
                 return RedirectToAction(nameof(Index));
             }
             catch (System.Exception ex)

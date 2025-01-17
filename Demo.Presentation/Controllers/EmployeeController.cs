@@ -10,23 +10,21 @@ namespace Demo.Presentation.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly IEmployeeRepository _empolyeeRepo;
-        private readonly IDepartmentRepository _departmentRepo;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public EmployeeController(IEmployeeRepository empolyeeRepo,IDepartmentRepository departmentRepo,IMapper mapper)
+        public EmployeeController(IUnitOfWork unitOfWork,IMapper mapper)
         {
-            _empolyeeRepo = empolyeeRepo;
-            _departmentRepo = departmentRepo;
+            _unitOfWork = unitOfWork; 
             _mapper = mapper;
         }
         public IActionResult Index(string SearchValue)
         {
             IEnumerable<Employee> employees;
             if (string.IsNullOrEmpty(SearchValue)) 
-                 employees = _empolyeeRepo.GetAll();
+                 employees = _unitOfWork.EmployeeRepository.GetAll();
             else
-                employees = _empolyeeRepo.GetEmployeesByName(SearchValue);
+                employees = _unitOfWork.EmployeeRepository.GetEmployeesByName(SearchValue);
                 
             var MappedEmployees = _mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeViewModel>>(employees);
             return View(MappedEmployees);
@@ -35,7 +33,7 @@ namespace Demo.Presentation.Controllers
 
         public IActionResult Create()
         {
-            ViewBag.Departments =  _departmentRepo.GetAll();
+            ViewBag.Departments = _unitOfWork.DepartmentRepository.GetAll();
             return View();
         }
 
@@ -57,7 +55,8 @@ namespace Demo.Presentation.Controllers
                 ///Employee employee = (Employee)employeeVM; //need to implement operator overloading in Model Employee!!!!!
 
                 var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
-                _empolyeeRepo.Add(MappedEmployee);
+                _unitOfWork.EmployeeRepository.Add(MappedEmployee);
+                _unitOfWork.Complete();
                 return RedirectToAction(nameof(Index));
             }
             return View(employeeVM);
@@ -67,7 +66,7 @@ namespace Demo.Presentation.Controllers
             if (id is null)
                 return BadRequest(); //status code 400
 
-            var employee = _empolyeeRepo.GetById(id.Value);
+            var employee = _unitOfWork.EmployeeRepository.GetById(id.Value);
             if (employee is null)
                 return NotFound();
             var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
@@ -80,11 +79,11 @@ namespace Demo.Presentation.Controllers
         {
             if (id is null)
                 return BadRequest(); //status code 400
-            var employee = _empolyeeRepo.GetById(id.Value);
+            var employee = _unitOfWork.EmployeeRepository.GetById(id.Value);
             if (employee is null)
                 return NotFound();
             var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
-            ViewBag.Departments = _departmentRepo.GetAll();
+            ViewBag.Departments = _unitOfWork.DepartmentRepository.GetAll();
             return View(MappedEmployee);
         }
 
@@ -101,7 +100,8 @@ namespace Demo.Presentation.Controllers
                 try
                 {
                     var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
-                    _empolyeeRepo.Update(MappedEmployee);
+                    _unitOfWork.EmployeeRepository.Update(MappedEmployee);
+                    _unitOfWork.Complete();
                     return RedirectToAction(nameof(Index));
                 }
                 catch (System.Exception ex)
@@ -118,7 +118,7 @@ namespace Demo.Presentation.Controllers
         {
             if (id is null)
                 return BadRequest(); //status code 400
-            var employee = _empolyeeRepo.GetById(id.Value);
+            var employee = _unitOfWork.EmployeeRepository.GetById(id.Value);
             if (employee is null)
                 return NotFound();
             var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
@@ -135,7 +135,8 @@ namespace Demo.Presentation.Controllers
             try
             {
                 var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
-                _empolyeeRepo.Delete(MappedEmployee);
+                _unitOfWork.EmployeeRepository.Delete(MappedEmployee);
+                _unitOfWork.Complete();
                 return RedirectToAction(nameof(Index));
             }
             catch (System.Exception ex)
