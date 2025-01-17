@@ -12,5 +12,7 @@ namespace Demo.BusinessLogic.Interfaces
         IDepartmentRepository DepartmentRepository { get; set; }
         IEmployeeRepository EmployeeRepository { get; set; }
         int Complete();
+
+        void Dispose(); // to close connection with database
     }
 }

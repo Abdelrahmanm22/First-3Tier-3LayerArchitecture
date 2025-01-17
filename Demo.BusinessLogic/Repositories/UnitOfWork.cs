@@ -8,7 +8,7 @@ using Demo.DataAccess.Contexts;
 
 namespace Demo.BusinessLogic.Repositories
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork,IDisposable
     {
         private readonly MVCAppDbContext _dbContext;
 
@@ -24,6 +24,11 @@ namespace Demo.BusinessLogic.Repositories
         public int Complete()
         {
             return _dbContext.SaveChanges();
+        }
+
+        public void Dispose() // to close connection with database ==>> w kda el CLR hy3rf lwa7do enk 3ayez t close el connection w m4 m7tag t use it in controllers
+        {
+            _dbContext.Dispose();
         }
     }
 }
