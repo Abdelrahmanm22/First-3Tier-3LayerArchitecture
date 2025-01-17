@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AutoMapper;
 using Demo.BusinessLogic.Interfaces;
 using Demo.DataAccess.Models;
+using Demo.Presentation.Helpers;
 using Demo.Presentation.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -54,6 +55,7 @@ namespace Demo.Presentation.Controllers
                 ///using casting
                 ///Employee employee = (Employee)employeeVM; //need to implement operator overloading in Model Employee!!!!!
 
+                employeeVM.ImageName = DocumentSettings.UplaodFile(employeeVM.Image,"Images");
                 var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
                 _unitOfWork.EmployeeRepository.Add(MappedEmployee);
                 _unitOfWork.Complete();

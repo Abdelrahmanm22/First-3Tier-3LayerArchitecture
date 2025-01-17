@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -32,6 +32,8 @@ namespace Demo.DataAccess.Models
         public string PhoneNumber { get; set; }
         public DateTime HireDate { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
+
+        public string ImageName { get; set; }
 
         [ForeignKey("Department")]
         public int? DepartmentId { get; set; } //fk allow null

@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System;
+using Microsoft.AspNetCore.Http;
 
 namespace Demo.Presentation.ViewModels
 {
@@ -31,6 +32,9 @@ namespace Demo.Presentation.ViewModels
         [Phone]
         public string PhoneNumber { get; set; }
         public DateTime HireDate { get; set; }
+
+        public IFormFile Image { get; set; }
+        public string ImageName { get; set; }
 
         [ForeignKey("Department")]
         public int? DepartmentId { get; set; } //fk allow null
