@@ -11,8 +11,8 @@ namespace Demo.BusinessLogic.Interfaces
         //Signature for property for each and every repositort interface
         IDepartmentRepository DepartmentRepository { get; set; }
         IEmployeeRepository EmployeeRepository { get; set; }
-        int Complete();
+        Task<int> CompleteAsync();
 
-        void Dispose(); // to close connection with database
+        //void Dispose(); // to close connection with database
     }
 }

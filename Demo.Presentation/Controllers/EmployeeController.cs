@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using Demo.BusinessLogic.Interfaces;
 using Demo.DataAccess.Models;
@@ -19,11 +20,11 @@ namespace Demo.Presentation.Controllers
             _unitOfWork = unitOfWork; 
             _mapper = mapper;
         }
-        public IActionResult Index(string SearchValue)
+        public async Task<IActionResult> Index(string SearchValue)
         {
             IEnumerable<Employee> employees;
             if (string.IsNullOrEmpty(SearchValue)) 
-                 employees = _unitOfWork.EmployeeRepository.GetAll();
+                 employees = await _unitOfWork.EmployeeRepository.GetAllAsync();
             else
                 employees = _unitOfWork.EmployeeRepository.GetEmployeesByName(SearchValue);
                 
@@ -32,14 +33,14 @@ namespace Demo.Presentation.Controllers
 
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewBag.Departments = _unitOfWork.DepartmentRepository.GetAll();
+            ViewBag.Departments = await _unitOfWork.DepartmentRepository.GetAllAsync();
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(EmployeeViewModel employeeVM)
+        public async Task<IActionResult> Create(EmployeeViewModel employeeVM)
         {
             if (ModelState.IsValid)
             {
@@ -57,18 +58,18 @@ namespace Demo.Presentation.Controllers
 
                 employeeVM.ImageName = DocumentSettings.UplaodFile(employeeVM.Image,"Images");
                 var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
-                _unitOfWork.EmployeeRepository.Add(MappedEmployee);
-                _unitOfWork.Complete();
+                await _unitOfWork.EmployeeRepository.AddAsync(MappedEmployee);
+                await _unitOfWork.CompleteAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(employeeVM);
         }
 
-        public IActionResult Details(int? id) {
+        public async Task<IActionResult> Details(int? id) {
             if (id is null)
                 return BadRequest(); //status code 400
 
-            var employee = _unitOfWork.EmployeeRepository.GetById(id.Value);
+            var employee = await _unitOfWork.EmployeeRepository.GetByIdAsync(id.Value);
             if (employee is null)
                 return NotFound();
             var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
@@ -77,20 +78,20 @@ namespace Demo.Presentation.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id is null)
                 return BadRequest(); //status code 400
-            var employee = _unitOfWork.EmployeeRepository.GetById(id.Value);
+            var employee = await _unitOfWork.EmployeeRepository.GetByIdAsync(id.Value);
             if (employee is null)
                 return NotFound();
             var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
-            ViewBag.Departments = _unitOfWork.DepartmentRepository.GetAll();
+            ViewBag.Departments = await _unitOfWork.DepartmentRepository.GetAllAsync();
             return View(MappedEmployee);
         }
 
         [HttpPost]
-        public IActionResult Edit(EmployeeViewModel employeeVM, [FromRoute] int id)
+        public async Task<IActionResult> Edit(EmployeeViewModel employeeVM, [FromRoute] int id)
         {
             if (id != employeeVM.Id) //for security
             {
@@ -101,10 +102,13 @@ namespace Demo.Presentation.Controllers
             {
                 try
                 {
-                    employeeVM.ImageName = DocumentSettings.UplaodFile(employeeVM.Image, "Images");
+                    if(employeeVM.ImageName is not null)
+                    {
+                        employeeVM.ImageName = DocumentSettings.UplaodFile(employeeVM.Image, "Images");
+                    }
                     var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
                     _unitOfWork.EmployeeRepository.Update(MappedEmployee);
-                    _unitOfWork.Complete();
+                    await _unitOfWork.CompleteAsync();
                     return RedirectToAction(nameof(Index));
                 }
                 catch (System.Exception ex)
@@ -117,11 +121,11 @@ namespace Demo.Presentation.Controllers
             }
             return View(employeeVM);
         }
-        public IActionResult Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id is null)
                 return BadRequest(); //status code 400
-            var employee = _unitOfWork.EmployeeRepository.GetById(id.Value);
+            var employee = await _unitOfWork.EmployeeRepository.GetByIdAsync(id.Value);
             if (employee is null)
                 return NotFound();
             var MappedEmployee = _mapper.Map<Employee, EmployeeViewModel>(employee);
@@ -129,7 +133,7 @@ namespace Demo.Presentation.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(EmployeeViewModel employeeVM, [FromRoute] int id)
+        public async Task<IActionResult> Delete(EmployeeViewModel employeeVM, [FromRoute] int id)
         {
             if (id != employeeVM.Id)
             {
@@ -139,7 +143,7 @@ namespace Demo.Presentation.Controllers
             {
                 var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
                 _unitOfWork.EmployeeRepository.Delete(MappedEmployee);
-                var res = _unitOfWork.Complete();
+                var res = await _unitOfWork.CompleteAsync();
                 //delete image
                 if (res > 0 && employeeVM.ImageName is not null)
                 {

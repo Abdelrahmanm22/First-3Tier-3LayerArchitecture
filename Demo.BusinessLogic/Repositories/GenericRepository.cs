@@ -18,9 +18,9 @@ namespace Demo.BusinessLogic.Repositories
         {
             this.dbContext = dbContext;
         }
-        public void Add(T entity)
+        public async Task AddAsync(T entity)
         {
-            dbContext.Add(entity);
+            await dbContext.AddAsync(entity);
         }
 
         public void Delete(T entity)
@@ -28,19 +28,19 @@ namespace Demo.BusinessLogic.Repositories
             dbContext.Remove(entity);
         }
 
-        public IEnumerable<T> GetAll()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
             ///da mosken l7d mnst5dm specification design pattern 
             if (typeof(T) == typeof(Employee))
             {
-                return (IEnumerable<T>) dbContext.Employees.Include(e=>e.Department).ToList();
+                return (IEnumerable<T>)await dbContext.Employees.Include(e=>e.Department).ToListAsync();
             }
-            return dbContext.Set<T>().ToList();
+            return await dbContext.Set<T>().ToListAsync();
         }
 
-        public T GetById(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
-            return dbContext.Set<T>().Find(id);
+            return await dbContext.Set<T>().FindAsync(id);
         }
 
         public void Update(T entity)

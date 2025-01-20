@@ -21,9 +21,9 @@ namespace Demo.BusinessLogic.Repositories
             _dbContext = dbContext;
         }
 
-        public int Complete()
+        public async Task<int> CompleteAsync()
         {
-            return _dbContext.SaveChanges();
+            return await _dbContext.SaveChangesAsync();
         }
 
         public void Dispose() // to close connection with database ==>> w kda el CLR hy3rf lwa7do enk 3ayez t close el connection w m4 m7tag t use it in controllers
