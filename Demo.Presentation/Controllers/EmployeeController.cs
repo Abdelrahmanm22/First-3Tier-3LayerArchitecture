@@ -138,7 +138,13 @@ namespace Demo.Presentation.Controllers
             {
                 var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
                 _unitOfWork.EmployeeRepository.Delete(MappedEmployee);
-                _unitOfWork.Complete();
+                var res = _unitOfWork.Complete();
+                //delete image
+                if (res > 0 && employeeVM.ImageName is not null)
+                {
+                    DocumentSettings.DeleteFile(employeeVM.ImageName, "Images");
+                }
+                
                 return RedirectToAction(nameof(Index));
             }
             catch (System.Exception ex)
