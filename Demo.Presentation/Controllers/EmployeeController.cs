@@ -101,6 +101,7 @@ namespace Demo.Presentation.Controllers
             {
                 try
                 {
+                    employeeVM.ImageName = DocumentSettings.UplaodFile(employeeVM.Image, "Images");
                     var MappedEmployee = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
                     _unitOfWork.EmployeeRepository.Update(MappedEmployee);
                     _unitOfWork.Complete();
