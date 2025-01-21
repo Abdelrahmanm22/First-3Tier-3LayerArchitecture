@@ -4,10 +4,14 @@ using Demo.BusinessLogic.Interfaces;
 using Demo.BusinessLogic.Repositories;
 using Demo.DataAccess.Models;
 using Demo.Presentation.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Presentation.Controllers
 {
+    //[AllowAnonymous] ==> Defualt
+    //[Authorize("Admin")]
+    [Authorize]
     public class DepartmentController : Controller
     {
         //private readonly IDepartmentRepository _departmentRepo;

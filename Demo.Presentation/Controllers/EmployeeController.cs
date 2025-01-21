@@ -6,10 +6,12 @@ using Demo.BusinessLogic.Interfaces;
 using Demo.DataAccess.Models;
 using Demo.Presentation.Helpers;
 using Demo.Presentation.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Presentation.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

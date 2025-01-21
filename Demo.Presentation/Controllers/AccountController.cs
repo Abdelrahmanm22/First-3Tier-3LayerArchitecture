@@ -9,10 +9,12 @@ namespace Demo.Presentation.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
 
-        public AccountController(UserManager<User> userManager)
+        public AccountController(UserManager<User> userManager,SignInManager<User> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         #region Register
@@ -39,7 +41,7 @@ namespace Demo.Presentation.Controllers
                 var Result = await _userManager.CreateAsync(User, model.Password);
                 if (Result.Succeeded)
                 {
-                    return RedirectToAction("Login");
+                    return RedirectToAction(nameof(Login));
                 }
                 else
                 {
@@ -54,7 +56,39 @@ namespace Demo.Presentation.Controllers
         #endregion
 
         //Login
-        
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            //server side validation
+            if (ModelState.IsValid) {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user is not null) {
+                      
+                    var flag = await _userManager.CheckPasswordAsync(user, model.Password);
+                    if (flag) {
+                        //login 
+                        var Result =  await _signInManager.PasswordSignInAsync(user,model.Password, model.RememberMe,false); //this function generate token
+                        if (Result.Succeeded) {
+                            return RedirectToAction("Index", "Home");
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty,"Incorrect Password");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Email is not Exsits");
+                }
+            }
+            return View(model);
+        }
         //Sign Out
         //Forget Password
         //Reset Password

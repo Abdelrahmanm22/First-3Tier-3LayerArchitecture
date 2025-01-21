@@ -7,6 +7,7 @@ using Demo.BusinessLogic.Repositories;
 using Demo.DataAccess.Contexts;
 using Demo.DataAccess.Models;
 using Demo.Presentation.MappingProfiles;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -55,8 +56,17 @@ namespace Demo.Presentation
                 Options.Password.RequireLowercase = true; //sld
                 Options.Password.RequireUppercase = true; //SLD
                 //P@ssw0rd
-            }).AddEntityFrameworkStores<MVCAppDbContext>();
-            services.AddAuthentication();
+            })
+            .AddEntityFrameworkStores<MVCAppDbContext>()
+            .AddDefaultTokenProviders();
+
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(Options =>
+            {
+                Options.LoginPath = "Account/Login";
+                Options.AccessDeniedPath = "Home/Error";
+
+            });
 
         }
 
@@ -78,13 +88,15 @@ namespace Demo.Presentation
 
             app.UseRouting();
 
+            ///Security
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Account}/{action=Register}/{id?}");
+                    pattern: "{controller=Account}/{action=Login}/{id?}");
             });
         }
     }
