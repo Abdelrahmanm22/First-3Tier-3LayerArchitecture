@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using System;
 namespace Demo.Presentation.Controllers
 {
     [Authorize]
@@ -68,6 +69,39 @@ namespace Demo.Presentation.Controllers
             var MappedUser = _mapper.Map<User, UserViewModel>(User);
 
             return View(ViewName,MappedUser);
+        }
+
+        public async Task<IActionResult> Edit(string Id) {
+            return await Details(Id, "Edit");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(UserViewModel model,[FromRoute] string Id)
+        {
+            if (Id != model.Id)
+            {
+                return BadRequest();
+            }
+
+            if (ModelState.IsValid) {
+                try
+                {
+                    //var MappedUser = _mapper.Map<UserViewModel, User>(model);
+                    var User = await _userManager.FindByIdAsync(Id);
+                    User.PhoneNumber = model.PhoneNumber;
+                    User.FName = model.FName;
+                    User.LName = model.LName;
+
+                    await _userManager.UpdateAsync(User);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty,ex.Message);
+                }
+                
+            }
+            return View(model);
         }
     }
 }
