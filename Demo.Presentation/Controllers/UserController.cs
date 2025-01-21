@@ -103,5 +103,24 @@ namespace Demo.Presentation.Controllers
             }
             return View(model);
         }
+
+        public async Task<IActionResult> Delete(string Id) {
+            return await Details(Id,"Delete");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ConfirmDelete(string Id) {
+
+            try
+            {
+                var User = await _userManager.FindByIdAsync(Id);
+                await _userManager.DeleteAsync(User);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex) {
+                ModelState.AddModelError(string.Empty,ex.Message);
+                return RedirectToAction("Error","Home");
+            }
+        } 
     }
 }
