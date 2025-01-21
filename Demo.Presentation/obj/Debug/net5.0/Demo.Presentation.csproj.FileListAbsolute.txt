@@ -464,3 +464,4 @@ D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\User\PartialViews\DeleteDetailsPartialView.cshtml.g.cs
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\User\Edit.cshtml.g.cs
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\User\Delete.cshtml.g.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Role\Index.cshtml.g.cs
