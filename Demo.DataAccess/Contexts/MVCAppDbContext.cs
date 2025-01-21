@@ -18,7 +18,7 @@ namespace Demo.DataAccess.Contexts
         }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        //public DbSet<IdentityUser> Users { get; set; }
+        public DbSet<IdentityUser> Users { get; set; }
         //public DbSet<IdentityRole> Roles { get; set; }
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
