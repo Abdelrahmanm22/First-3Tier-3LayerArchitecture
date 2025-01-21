@@ -44,6 +44,7 @@ namespace Demo.Presentation
             //services.AddScoped<IEmployeeRepository, EmployeeRepository>(); //allow dependency injection
             services.AddAutoMapper(m=>m.AddProfile(new EmployeeProfile())); //Transient
             services.AddAutoMapper(d => d.AddProfile(new DepartmentProfile())); //Transient
+            services.AddAutoMapper(d => d.AddProfile(new UserProfile())); //Transient
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //services.AddScoped<UserManager<User>>();

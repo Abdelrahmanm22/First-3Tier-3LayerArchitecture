@@ -460,3 +460,5 @@ D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\User\Details.cshtml.g.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\User\PartialViews\DeleteDetailsPartialView.cshtml.g.cs

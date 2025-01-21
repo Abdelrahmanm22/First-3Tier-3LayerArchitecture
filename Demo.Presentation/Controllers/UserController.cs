@@ -6,15 +6,20 @@ using Demo.Presentation.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 namespace Demo.Presentation.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         private readonly UserManager<User> _userManager;
+        private readonly IMapper _mapper;
 
-        public UserController(UserManager<User> userManager)
+        public UserController(UserManager<User> userManager,IMapper mapper)
         {
             _userManager = userManager;
+            _mapper = mapper;
         }
         public async Task<IActionResult> Index(string SearchValue)
         {
@@ -47,6 +52,22 @@ namespace Demo.Presentation.Controllers
                 return View(new List<UserViewModel> { MappedUser });
             }
             
+        }
+
+        public async Task<IActionResult> Details(string Id, string ViewName="Details")
+        {
+            if (Id is null)
+            {
+                return BadRequest();
+            }
+            var User =  await _userManager.FindByIdAsync(Id);
+            if (User is null) {
+                return NotFound();
+            }
+
+            var MappedUser = _mapper.Map<User, UserViewModel>(User);
+
+            return View(ViewName,MappedUser);
         }
     }
 }
