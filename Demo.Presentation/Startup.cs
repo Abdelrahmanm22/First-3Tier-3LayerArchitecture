@@ -5,14 +5,17 @@ using System.Threading.Tasks;
 using Demo.BusinessLogic.Interfaces;
 using Demo.BusinessLogic.Repositories;
 using Demo.DataAccess.Contexts;
+using Demo.DataAccess.Models;
 using Demo.Presentation.MappingProfiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace Demo.Presentation
 {
@@ -42,6 +45,19 @@ namespace Demo.Presentation
             services.AddAutoMapper(d => d.AddProfile(new DepartmentProfile())); //Transient
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            //services.AddScoped<UserManager<User>>();
+            //services.AddScoped<SignInManager<User>>();
+
+            services.AddIdentity<User, IdentityRole>(Options =>
+            {
+                Options.Password.RequireNonAlphanumeric = true; //@ # $
+                Options.Password.RequireDigit = true; //1345
+                Options.Password.RequireLowercase = true; //sld
+                Options.Password.RequireUppercase = true; //SLD
+                //P@ssw0rd
+            }).AddEntityFrameworkStores<MVCAppDbContext>();
+            services.AddAuthentication();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,7 +84,7 @@ namespace Demo.Presentation
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Account}/{action=Register}/{id?}");
             });
         }
     }

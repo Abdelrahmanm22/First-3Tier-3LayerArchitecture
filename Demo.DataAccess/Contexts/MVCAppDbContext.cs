@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Demo.DataAccess.Contexts
 {
-    public class MVCAppDbContext:IdentityDbContext
+    public class MVCAppDbContext:IdentityDbContext<User>
     {
         public MVCAppDbContext(DbContextOptions<MVCAppDbContext> options):base(options)
         {
