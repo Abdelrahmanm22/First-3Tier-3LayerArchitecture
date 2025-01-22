@@ -470,3 +470,6 @@ D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Role\Details.cshtml.g.cs
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Role\Edit.cshtml.g.cs
 D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Role\PartialViews\DeleteDetailsPartialView.cshtml.g.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Account\ForgetPassword.cshtml.g.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Account\CheckYourInbox.cshtml.g.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.Presentation\obj\Debug\net5.0\Razor\Views\Account\ResetPassword.cshtml.g.cs

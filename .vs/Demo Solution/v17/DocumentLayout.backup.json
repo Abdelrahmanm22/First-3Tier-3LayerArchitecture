@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|d:\\my career\\asp.net\\myprojects\\demo solution\\demo.presentation\\views\\shared\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EC5FE88-BD9C-42AC-8166-F6EA32FF20DC}|Demo.Presentation\\Demo.Presentation.csproj|solutionrelative:demo.presentation\\views\\shared\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Demo.Presentation\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Demo.Presentation\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAswGQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T14:09:37.87Z",
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Account\\ResetPassword.cshtml",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "Demo.Presentation\\Views\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-22T16:54:51.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Demo.Presentation\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAuAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Demo.Presentation\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Demo.Presentation\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAYwJ8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T14:20:22.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_AuthLayout.cshtml",
+              "DocumentMoniker": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Shared\\_AuthLayout.cshtml",
+              "RelativeDocumentMoniker": "Demo.Presentation\\Views\\Shared\\_AuthLayout.cshtml",
+              "ToolTip": "D:\\My Career\\ASP.NET\\MyProjects\\Demo Solution\\Demo.Presentation\\Views\\Shared\\_AuthLayout.cshtml",
+              "RelativeToolTip": "Demo.Presentation\\Views\\Shared\\_AuthLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-22T14:05:41.564Z",
+              "WhenOpened": "2025-01-22T16:32:19.109Z",
               "EditorCaption": ""
             }
           ]
