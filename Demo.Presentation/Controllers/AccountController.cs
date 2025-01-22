@@ -55,6 +55,7 @@ namespace Demo.Presentation.Controllers
         }
         #endregion
 
+        #region Login
         //Login
         public IActionResult Login()
         {
@@ -65,21 +66,25 @@ namespace Demo.Presentation.Controllers
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             //server side validation
-            if (ModelState.IsValid) {
+            if (ModelState.IsValid)
+            {
                 var user = await _userManager.FindByEmailAsync(model.Email);
-                if (user is not null) {
-                      
+                if (user is not null)
+                {
+
                     var flag = await _userManager.CheckPasswordAsync(user, model.Password);
-                    if (flag) {
+                    if (flag)
+                    {
                         //login 
-                        var Result =  await _signInManager.PasswordSignInAsync(user,model.Password, model.RememberMe,false); //this function generate token
-                        if (Result.Succeeded) {
+                        var Result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false); //this function generate token
+                        if (Result.Succeeded)
+                        {
                             return RedirectToAction("Index", "Home");
                         }
                     }
                     else
                     {
-                        ModelState.AddModelError(string.Empty,"Incorrect Password");
+                        ModelState.AddModelError(string.Empty, "Incorrect Password");
                     }
                 }
                 else
@@ -89,7 +94,15 @@ namespace Demo.Presentation.Controllers
             }
             return View(model);
         }
+        #endregion
+
+
         //Sign Out
+        public new async Task<IActionResult> SignOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(Login));
+        }
         //Forget Password
         //Reset Password
 
