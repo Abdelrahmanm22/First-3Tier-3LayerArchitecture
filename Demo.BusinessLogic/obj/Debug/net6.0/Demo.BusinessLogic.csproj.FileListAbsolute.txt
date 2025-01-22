@@ -1,0 +1,16 @@
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\bin\Debug\net6.0\Demo.BusinessLogic.deps.json
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\bin\Debug\net6.0\Demo.BusinessLogic.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\bin\Debug\net6.0\Demo.BusinessLogic.pdb
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\bin\Debug\net6.0\Demo.DataAccess.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\bin\Debug\net6.0\Demo.DataAccess.pdb
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.BusinessLogic.csproj.AssemblyReference.cache
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.BusinessLogic.AssemblyInfoInputs.cache
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.BusinessLogic.AssemblyInfo.cs
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.BusinessLogic.sourcelink.json
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.Bus.99DA84BC.Up2Date
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.BusinessLogic.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\refint\Demo.BusinessLogic.dll
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\Demo.BusinessLogic.pdb
+D:\My Career\ASP.NET\MyProjects\Demo Solution\Demo.BusinessLogic\obj\Debug\net6.0\ref\Demo.BusinessLogic.dll

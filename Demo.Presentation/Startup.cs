@@ -32,43 +32,7 @@ namespace Demo.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-            ///Allow Dependenncy Injection
-            services.AddDbContext<MVCAppDbContext>(Options =>
-            {
-                //Options.UseSqlServer("Server = .; Database = MVCAppDb; Trusted_Connection = True");   el makan el s7 ely yt7t feh el connection string hwa el ((appsetting.json)) 
-                Options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });            ///needs package EFCore.SQlServer in Data access layer so need to build only
-
-            services.AddScoped<IDepartmentRepository, DepartmentRepository>(); //allow dependency injection
-            //services.AddScoped<IEmployeeRepository, EmployeeRepository>(); //allow dependency injection
-            services.AddAutoMapper(m=>m.AddProfile(new EmployeeProfile())); //Transient
-            services.AddAutoMapper(d => d.AddProfile(new DepartmentProfile())); //Transient
-            services.AddAutoMapper(d => d.AddProfile(new UserProfile())); //Transient
-            services.AddAutoMapper(d => d.AddProfile(new RoleProfile())); //Transient
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-            //services.AddScoped<UserManager<User>>();
-            //services.AddScoped<SignInManager<User>>();
-
-            services.AddIdentity<User, IdentityRole>(Options =>
-            {
-                Options.Password.RequireNonAlphanumeric = true; //@ # $
-                Options.Password.RequireDigit = true; //1345
-                Options.Password.RequireLowercase = true; //sld
-                Options.Password.RequireUppercase = true; //SLD
-                //P@ssw0rd
-            })
-            .AddEntityFrameworkStores<MVCAppDbContext>()
-            .AddDefaultTokenProviders();
-
-
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(Options =>
-            {
-                Options.LoginPath = "Account/Login";
-                Options.AccessDeniedPath = "Home/Error";
-
-            });
+            
 
         }
 
