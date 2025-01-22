@@ -8,7 +8,8 @@ namespace Demo.Presentation.MappingProfiles
     {
 
         public RoleProfile() {
-            CreateMap<IdentityRole, RoleViewModel>();
+            CreateMap<IdentityRole, RoleViewModel>()
+                .ForMember(d=>d.RoleName,o=>o.MapFrom(s=>s.Name)).ReverseMap();
         }
     }
 }
